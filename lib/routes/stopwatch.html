@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vanilla JS Stopwatch - Javascript Stopwatch</title>
+</head>
+<body>
+  <div>
+    <h1 class="display"></h1>
+    <button onclick="resetTimer()">Reset</button>
+  </div>
+</body>
+<script>
+  var display = document.querySelector(".display")
+  var current_time = 0
+
+  const resetTimer = () => {
+    current_time = 0
+  }
+
+  const startTimer = () => {
+    display.innerHTML = current_time
+    current_time = current_time + 1
+  }
+  
+  startTimer()
+  setInterval(startTimer, 1000)
+</script>
+</body>
+</html>
